@@ -1,4 +1,5 @@
 katz_deli = []
+$counter = 0 
 
 def line(katz_deli)
   line_list = "The line is currently:"
@@ -11,9 +12,10 @@ def line(katz_deli)
   end 
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.size} in line."
+def take_a_number(katz_deli)
+  $counter += 1
+  katz_deli << $counter
+  puts "You are number #{katz_deli.last}."
 end
 
 def now_serving(katz_deli)
